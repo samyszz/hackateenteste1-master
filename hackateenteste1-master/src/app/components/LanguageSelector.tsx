@@ -2,6 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 const availableLanguages = [
   { code: "en", label: "English" },
@@ -15,7 +23,8 @@ const availableLanguages = [
 export default function LanguageSelector() {
   const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(
-    availableLanguages.find((l) => l.code === i18n.language) || availableLanguages[3]
+    availableLanguages.find((l) => l.code === i18n.language) ||
+      availableLanguages[3]
   );
 
   useEffect(() => {
@@ -26,20 +35,27 @@ export default function LanguageSelector() {
 
   return (
     <div className="w-full max-w-[150px]">
-      <select
-        value={selectedLanguage.code}
-        onChange={(e) => {
-          const lang = availableLanguages.find((l) => l.code === e.target.value);
-          if (lang) setSelectedLanguage(lang);
-        }}
-        className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-black dark:bg-zinc-950 dark:text-white"
-      >
-        {availableLanguages.map((lang) => (
-          <option key={lang.code} value={lang.code}>
-            {lang.label}
-          </option>
-        ))}
-      </select>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" className="w-full justify-between">
+            {selectedLanguage.label}
+            <ChevronDown className="ml-2 h-4 w-4" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="w-[--radix-dropdown-menu-trigger-width]">
+          {availableLanguages.map((lang) => (
+            <DropdownMenuItem
+              key={lang.code}
+              onClick={() => setSelectedLanguage(lang)}
+            >
+              {lang.code === selectedLanguage.code && (
+                <span className="mr-2">✓</span>
+              )}
+              {lang.label}
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }
