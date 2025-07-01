@@ -119,7 +119,7 @@ export default function Converter() {
                   >
                     {currencies.map((currency) => (
                       <option key={currency.code} value={currency.code}>
-                        {currency.code} - {currency.name}
+                        {currency.code} - {t(`Countries.${currency.code}`, currency.name)}
                       </option>
                     ))}
                   </select>
@@ -137,7 +137,7 @@ export default function Converter() {
                   >
                     {currencies.map((currency) => (
                       <option key={currency.code} value={currency.code}>
-                        {currency.code} - {currency.name}
+                        {currency.code} - {t(`Countries.${currency.code}`, currency.name)}
                       </option>
                     ))}
                   </select>

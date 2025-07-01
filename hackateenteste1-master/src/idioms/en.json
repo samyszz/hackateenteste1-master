@@ -44,7 +44,24 @@
     "value_placeholder": "Value",
     "length": "Length",
     "weight": "Weight",
-    "temperature": "Temperature"
+    "temperature": "Temperature",
+    "units": {
+      "m": "Meter",
+      "cm": "Centimeter",
+      "in": "Inch",
+      "ft": "Foot",
+      "km": "Kilometer",
+      "mi": "Mile",
+      "kg": "Kilogram",
+      "g": "Gram",
+      "lb": "Pound",
+      "oz": "Ounce",
+      "mg": "Milligram",
+      "t": "Ton",
+      "C": "Celsius",
+      "F": "Fahrenheit",
+      "K": "Kelvin"
+    }
   },
   "Guide": {
     "page_title": "Guide for Newly Arrived Refugees in Brazil",
@@ -68,8 +85,20 @@
   "Info": {
     "title": "Important information for refugees",
     "ongs_support": "Support NGOs",
+    "unhcr": "UNHCR - The UN Refugee Agency",
+    "caritas": "Caritas Brazil",
+    "imdh": "Institute for Migration and Human Rights (IMDH)",
+    "msf": "Doctors Without Borders",
     "where_to_work": "Where to Work",
-    "education_training": "Education and Training"
+    "cat_centers": "Worker Support Centers (CATs)",
+    "inclusive_companies": "Companies with inclusion projects",
+    "cooperatives": "Sewing and production cooperatives",
+    "training_courses": "Training courses with job openings",
+    "education_training": "Education and Training",
+    "etecs": "ETECs with vacancies for refugees",
+    "free_portuguese_courses": "Free Portuguese courses",
+    "scholarships": "Scholarship and certification programs",
+    "digital_followup": "Digital follow-up and online enrollment"
   },
   "Location": {
     "page_title": "See where you are:",
@@ -103,7 +132,11 @@
     "follow_us": "Follow Us",
     "all_rights_reserved": "© 2025 Global Core. All rights reserved."
   },
-
+  "Theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
   "Countries": {
     "AF": "Afghanistan",
     "AL": "Albania",

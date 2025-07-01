@@ -4,7 +4,8 @@
     "news": "Noticias",
     "guide": "Guía",
     "login": "Iniciar sesión",
-    "restricted_area": "Área restringida"
+    "restricted_area": "Área restringida",
+    "select_country": "Selecciona un país"
   },
   "SectionFirst": {
     "title": "Juntos por un Nuevo Comienzo",
@@ -16,12 +17,9 @@
   },
   "News": {
     "page_title": "Noticias sobre Refugiados",
+    "loading": "Cargando noticias...",
     "no_news_found": "No se encontraron noticias.",
-    "no_image": "Sin imagen",
-    "click_for_details": "Haga clic para ver los detalles",
-    "update_news": "Actualizar Noticias",
-    "read_more": "Leer más en la fuente",
-    "no_description": "No hay descripción disponible."
+    "read_more": "Leer más"
   },
   "Converter": {
     "page_title": "¿Tienes dinero y no sabes cuánto vale?",
@@ -43,7 +41,24 @@
     "value_placeholder": "Valor",
     "length": "Longitud",
     "weight": "Peso",
-    "temperature": "Temperatura"
+    "temperature": "Temperatura",
+    "units": {
+      "m": "Metro",
+      "cm": "Centímetro",
+      "in": "Pulgada",
+      "ft": "Pie",
+      "km": "Kilómetro",
+      "mi": "Milla",
+      "kg": "Kilogramo",
+      "g": "Gramo",
+      "lb": "Libra",
+      "oz": "Onza",
+      "mg": "Miligramo",
+      "t": "Tonelada",
+      "C": "Celsius",
+      "F": "Fahrenheit",
+      "K": "Kelvin"
+    }
   },
   "Guide": {
     "page_title": "Guía para Refugiados Recién Llegados a Brasil",
@@ -67,8 +82,20 @@
   "Info": {
     "title": "Información importante para refugiados",
     "ongs_support": "ONGs de Apoyo",
+    "unhcr": "ACNUR - Agencia de la ONU para los Refugiados",
+    "caritas": "Cáritas Brasileña",
+    "imdh": "Instituto Migraciones y Derechos Humanos (IMDH)",
+    "msf": "Médicos Sin Fronteras",
     "where_to_work": "Dónde Trabajar",
-    "education_training": "Educación y Formación"
+    "cat_centers": "Centros de Apoyo al Trabajador (CATs)",
+    "inclusive_companies": "Empresas con proyectos de inclusión",
+    "cooperatives": "Cooperativas de costura y producción",
+    "training_courses": "Cursos de capacitación con ofertas de empleo",
+    "education_training": "Educación y Formación",
+    "etecs": "ETECs con vacantes para refugiados",
+    "free_portuguese_courses": "Cursos de portugués gratuitos",
+    "scholarships": "Programas de becas y certificaciones",
+    "digital_followup": "Seguimiento digital e inscripciones en línea"
   },
   "Location": {
     "page_title": "Mira dónde estás:",
@@ -102,7 +129,11 @@
     "follow_us": "Síguenos",
     "all_rights_reserved": "© 2025 Global Core. Todos los derechos reservados."
   },
-
+  "Theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
   "Countries": {
     "AF": "Afganistán",
     "AL": "Albania",

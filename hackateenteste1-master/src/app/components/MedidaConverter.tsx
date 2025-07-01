@@ -1,15 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function MedidaConverter() {
   const { t } = useTranslation();
 
-  // A estrutura de dados permanece a mesma
-  const units = {
+  const units = useMemo(() => ({
     length: {
       label: t('MeasureConverter.length'),
-      units: { m: "Metro", cm: "Centímetro", in: "Polegada", ft: "Pé", km: "Quilômetro", mi: "Milha" },
+      units: {
+        m: t('MeasureConverter.units.m'),
+        cm: t('MeasureConverter.units.cm'),
+        in: t('MeasureConverter.units.in'),
+        ft: t('MeasureConverter.units.ft'),
+        km: t('MeasureConverter.units.km'),
+        mi: t('MeasureConverter.units.mi')
+      },
       convert: (value: number, from: string, to: string) => {
         const conversions: Record<string, number> = { m: 1, cm: 0.01, in: 0.0254, ft: 0.3048, km: 1000, mi: 1609.34 };
         return (value * conversions[from]) / conversions[to];
@@ -17,29 +23,52 @@ export default function MedidaConverter() {
     },
     weight: {
       label: t('MeasureConverter.weight'),
-      units: { kg: "Quilo", g: "Grama", lb: "Libra", oz: "Onça", mg: "Miligramas", t: "Tonelada" },
+      units: {
+        kg: t('MeasureConverter.units.kg'),
+        g: t('MeasureConverter.units.g'),
+        lb: t('MeasureConverter.units.lb'),
+        oz: t('MeasureConverter.units.oz'),
+        mg: t('MeasureConverter.units.mg'),
+        t: t('MeasureConverter.units.t')
+      },
       convert: (value: number, from: string, to: string) => {
-        const conversions: Record<string, number> = { kg: 1, g: 0.001, mg: 0.000001, lb: 0.453592, oz: 0.0283495, t: 1000 };
+        const conversions: Record<string, number> = { kg: 1, g: 0.001, mg: 1e-6, lb: 0.453592, oz: 0.0283495, t: 1000 };
         return (value * conversions[from]) / conversions[to];
       },
     },
     temperature: {
       label: t('MeasureConverter.temperature'),
-      units: { C: "Celsius", F: "Fahrenheit", K: "Kelvin" },
+      units: {
+        C: t('MeasureConverter.units.C'),
+        F: t('MeasureConverter.units.F'),
+        K: t('MeasureConverter.units.K')
+      },
       convert: (value: number, from: string, to: string) => {
         if (from === to) return value;
-        const celsius = from === "C" ? value : from === "F" ? (value - 32) * (5 / 9) : value - 273.15;
-        return to === "C" ? celsius : to === "F" ? (celsius * 9) / 5 + 32 : celsius + 273.15;
+        let celsius: number;
+        if (from === 'F') {
+          celsius = (value - 32) * 5/9;
+        } else if (from === 'K') {
+          celsius = value - 273.15;
+        } else {
+          celsius = value;
+        }
+
+        if (to === 'F') {
+          return (celsius * 9/5) + 32;
+        } else if (to === 'K') {
+          return celsius + 273.15;
+        }
+        return celsius;
       },
     },
-  };
+  }), [t]);
 
   type UnitType = keyof typeof units;
-  type UnitKey<T extends UnitType> = keyof (typeof units)[T]["units"];
 
   const [type, setType] = useState<UnitType>("length");
-  const [from, setFrom] = useState<UnitKey<UnitType>>("m" as UnitKey<UnitType>);
-  const [to, setTo] = useState<UnitKey<typeof type>>("cm" as UnitKey<typeof type>);
+  const [from, setFrom] = useState<string>("m");
+  const [to, setTo] = useState<string>("cm");
   const [value, setValue] = useState<string>("");
 
   const result = value ? units[type].convert(parseFloat(value), from, to).toFixed(4) : "";
@@ -47,18 +76,17 @@ export default function MedidaConverter() {
   const handleTypeChange = (val: UnitType) => {
     setType(val);
     const [first, second] = Object.keys(units[val].units);
-    setFrom(first as UnitKey<typeof val>);
-    setTo(second as UnitKey<typeof val>);
+    setFrom(first);
+    setTo(second);
   };
 
   const handleValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
-    if (inputValue === "" || !isNaN(Number(inputValue))) {
+    if (inputValue === "" || /^-?\d*\.?\d*$/.test(inputValue)) {
       setValue(inputValue);
     }
   };
 
-  // Função auxiliar para obter o rótulo da unidade de forma segura
   const getUnitLabel = (type: UnitType, key: string) => {
     return (units[type].units as Record<string, string>)[key];
   };
@@ -108,7 +136,7 @@ export default function MedidaConverter() {
             <div className="grid grid-cols-2 gap-2">
               <select
                 value={from}
-                onChange={(e) => setFrom(e.target.value as UnitKey<typeof type>)}
+                onChange={(e) => setFrom(e.target.value)}
                 className="w-full border rounded-md p-2 dark:bg-zinc-800 dark:text-white"
               >
                 {Object.entries(units[type].units).map(([key, label]) => (
@@ -120,7 +148,7 @@ export default function MedidaConverter() {
 
               <select
                 value={to}
-                onChange={(e) => setTo(e.target.value as UnitKey<typeof type>)}
+                onChange={(e) => setTo(e.target.value)}
                 className="w-full border rounded-md p-2 dark:bg-zinc-800 dark:text-white"
               >
                 {Object.entries(units[type].units).map(([key, label]) => (
@@ -131,7 +159,6 @@ export default function MedidaConverter() {
               </select>
             </div>
 
-            {/* CÓDIGO CORRIGIDO AQUI */}
             {value && (
               <div className="text-center mt-4 text-xl font-medium">
                 {value} {getUnitLabel(type, from)} ={" "}

@@ -43,7 +43,24 @@
     "value_placeholder": "值",
     "length": "长度",
     "weight": "重量",
-    "temperature": "温度"
+    "temperature": "温度",
+    "units": {
+      "m": "米",
+      "cm": "厘米",
+      "in": "英寸",
+      "ft": "英尺",
+      "km": "公里",
+      "mi": "英里",
+      "kg": "公斤",
+      "g": "克",
+      "lb": "磅",
+      "oz": "盎司",
+      "mg": "毫克",
+      "t": "吨",
+      "C": "摄氏度",
+      "F": "华氏度",
+      "K": "开尔文"
+    }
   },
   "Guide": {
     "page_title": "新抵巴西难民指南",
@@ -67,8 +84,20 @@
   "Info": {
     "title": "难民重要信息",
     "ongs_support": "支持性非政府组织",
+    "unhcr": "联合国难民署",
+    "caritas": "巴西明爱",
+    "imdh": "移民与人权研究所 (IMDH)",
+    "msf": "无国界医生",
     "where_to_work": "工作地点",
-    "education_training": "教育与培训"
+    "cat_centers": "工人支持中心 (CAT)",
+    "inclusive_companies": "有包容性项目的公司",
+    "cooperatives": "缝纫和生产合作社",
+    "training_courses": "提供就业机会的培训课程",
+    "education_training": "教育与培训",
+    "etecs": "为难民提供空缺的 ETEC",
+    "free_portuguese_courses": "免费葡萄牙语课程",
+    "scholarships": "奖学金和认证项目",
+    "digital_followup": "数字跟进和在线注册"
   },
   "Location": {
     "page_title": "查看您所在的位置：",
@@ -102,7 +131,11 @@
     "follow_us": "关注我们",
     "all_rights_reserved": "© 2025 Global Core. 版权所有。"
   },
-
+  "Theme": {
+    "light": "浅色",
+    "dark": "深色",
+    "system": "系统"
+  },
   "Countries": {
     "AF": "阿富汗",
     "AL": "阿尔巴尼亚",

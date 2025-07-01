@@ -43,7 +43,24 @@
     "value_placeholder": "Valeur",
     "length": "Longueur",
     "weight": "Poids",
-    "temperature": "Température"
+    "temperature": "Température",
+    "units": {
+      "m": "Mètre",
+      "cm": "Centimètre",
+      "in": "Pouce",
+      "ft": "Pied",
+      "km": "Kilomètre",
+      "mi": "Mile",
+      "kg": "Kilogramme",
+      "g": "Gramme",
+      "lb": "Livre",
+      "oz": "Once",
+      "mg": "Milligramme",
+      "t": "Tonne",
+      "C": "Celsius",
+      "F": "Fahrenheit",
+      "K": "Kelvin"
+    }
   },
   "Guide": {
     "page_title": "Guide pour les Réfugiés Récemment Arrivés au Brésil",
@@ -67,8 +84,20 @@
   "Info": {
     "title": "Informations importantes pour les réfugiés",
     "ongs_support": "ONG d'aide",
+    "unhcr": "HCR - L'Agence des Nations Unies pour les réfugiés",
+    "caritas": "Caritas Brésil",
+    "imdh": "Institut des migrations et des droits de l'homme (IMDH)",
+    "msf": "Médecins Sans Frontières",
     "where_to_work": "Où travailler",
-    "education_training": "Éducation et formation"
+    "cat_centers": "Centres de soutien aux travailleurs (CAT)",
+    "inclusive_companies": "Entreprises avec des projets d'inclusion",
+    "cooperatives": "Coopératives de couture et de production",
+    "training_courses": "Cours de formation avec des offres d'emploi",
+    "education_training": "Éducation et formation",
+    "etecs": "ETEC avec des postes vacants pour les réfugiés",
+    "free_portuguese_courses": "Cours de portugais gratuits",
+    "scholarships": "Programmes de bourses et de certification",
+    "digital_followup": "Suivi numérique et inscription en ligne"
   },
   "Location": {
     "page_title": "Voir où vous êtes :",
@@ -102,7 +131,11 @@
     "follow_us": "Suivez-nous",
     "all_rights_reserved": "© 2025 Global Core. Tous droits réservés."
   },
-
+  "Theme": {
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
   "Countries": {
     "AF": "Afghanistan",
     "AL": "Albanie",

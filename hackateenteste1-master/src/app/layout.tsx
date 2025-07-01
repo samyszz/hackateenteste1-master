@@ -1,4 +1,6 @@
 // app/layout.tsx
+"use client";
+
 import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -6,9 +8,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Help from "./components/Help";
 import ThemeProvider from "./providers/theme-provider";
-import TranslationProvider from "./providers/TranslationProvider"; // Importe o provider
+import TranslationProvider from "./providers/TranslationProvider";
 import BackToTopButton from "./components/BackUp";
 import { AosInit } from "./components/aos-init";
+import { useTranslation } from "react-i18next";
+import { ptBR, enUS, esES, frFR, arSA, zhCN } from "@clerk/localizations";
+import React from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,27 +25,35 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "L.A.R",
-  description: "Lugar de Acolhimento e Recomeço",
-  icons: {
-    icon: "/favicon-v2.ico",
-  },
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const { i18n } = useTranslation();
+
+  const clerkLocalization = {
+    "pt": ptBR,
+    "en": enUS,
+    "es": esES,
+    "fr": frFR,
+    "ar": arSA,
+    "zh": zhCN
+  }[i18n.language] || enUS;
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={i18n.language} suppressHydrationWarning>
+      <head>
+          <title>L.A.R</title>
+          <meta name="description" content="Lugar de Acolhimento e Recomeço"/>
+          <link rel="icon" href="/favicon-v2.ico" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ClerkProvider>
+        <ClerkProvider localization={clerkLocalization}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <TranslationProvider> {/* Envolva com o TranslationProvider */}
+            <TranslationProvider>
               <Help />
               <Header />
               <BackToTopButton />
