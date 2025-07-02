@@ -3,9 +3,22 @@
     "home": "Accueil",
     "news": "Actualités",
     "guide": "Guide",
+    "about_us": "À propos de nous",
     "login": "Connexion",
     "restricted_area": "Zone restreinte"
   },
+  "Footer": {
+    "lar_title": "L.A.R",
+    "lar_subtitle": "Lieu d'Accueil et de Renouveau",
+    "useful_links": "Liens utiles",
+    "home": "Accueil",
+    "about_us": "À propos de nous",
+    "contact": "Contact",
+    "terms_of_use": "Conditions d'utilisation",
+    "follow_us": "Suivez-nous",
+    "all_rights_reserved": "© 2025 Global Core. Tous droits réservés."
+  },
+
   "SectionFirst": {
     "title": "Ensemble pour un Nouveau Départ",
     "description": "aidant à l'adaptation, à l'intégration et à la construction d'une nouvelle vie digne. Nous offrons orientation, cours, accueil et opportunités.",
@@ -120,17 +133,7 @@
     "samu": "192: SAMU (Ambulance)",
     "firefighters": "193: Pompiers"
   },
-  "Footer": {
-    "lar_title": "L.A.R",
-    "lar_subtitle": "Lieu d'Accueil et de Renouveau",
-    "useful_links": "Liens utiles",
-    "home": "Accueil",
-    "about_us": "À propos de nous",
-    "contact": "Contact",
-    "terms_of_use": "Conditions d'utilisation",
-    "follow_us": "Suivez-nous",
-    "all_rights_reserved": "© 2025 Global Core. Tous droits réservés."
-  },
+
   "Theme": {
     "light": "Clair",
     "dark": "Sombre",

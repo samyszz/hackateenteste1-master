@@ -1,11 +1,26 @@
+
+
 {
   "Header": {
     "home": "Home",
     "news": "News",
     "guide": "Guide",
+    "about_us": "About us",
     "login": "Login",
     "restricted_area": "Restricted Area",
     "select_country": "Select a country"
+  },
+  "Footer": {
+    "lar_title": "L.A.R",
+    "lar_subtitle": "Place of Welcome and New Beginning",
+    "useful_links": "Useful Links",
+    "home": "Home",
+    "about_us": "About us",
+    "contact": "Contact",
+    "terms_of_use": "Terms of use",
+    "follow_us": "Follow Us",
+    "all_rights_reserved": "© 2025 Global Core. All rights reserved."
+
   },
   "SectionFirst": {
     "title": "Together for a New Beginning",
@@ -121,17 +136,7 @@
     "samu": "192: SAMU (Ambulance)",
     "firefighters": "193: Fire Department"
   },
-  "Footer": {
-    "lar_title": "L.A.R",
-    "lar_subtitle": "Place of Welcome and New Beginning",
-    "useful_links": "Useful Links",
-    "home": "Home",
-    "about_us": "About us",
-    "contact": "Contact",
-    "terms_of_use": "Terms of use",
-    "follow_us": "Follow Us",
-    "all_rights_reserved": "© 2025 Global Core. All rights reserved."
-  },
+
   "Theme": {
     "light": "Light",
     "dark": "Dark",

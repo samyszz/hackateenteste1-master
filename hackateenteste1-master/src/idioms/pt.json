@@ -3,10 +3,23 @@
     "home": "Início",
     "news": "Notícias",
     "guide": "Guia",
+    "about_us": "Sobre nós",
     "login": "Login",
     "restricted_area": "Área Restrita",
     "select_country": "Selecione um país"
   },
+  "Footer": {
+    "lar_title": "L.A.R",
+    "lar_subtitle": "Lugar de Acolhimento e Recomeço",
+    "useful_links": "Links úteis",
+    "home": "Início",
+    "about_us": "Sobre nós",
+    "contact": "Contato",
+    "terms_of_use": "Termos de uso",
+    "follow_us": "Nos Siga",
+    "all_rights_reserved": "© 2025 Global Core. Todos os direitos reservados."
+  },
+
   "SectionFirst": {
     "title": "Juntos por um Recomeço",
     "description": "ajudando na adaptação, integração e construção de uma nova vida com dignidade. Oferecemos orientação, cursos, acolhimento e oportunidades.",
@@ -121,17 +134,7 @@
     "samu": "192: SAMU (Ambulância)",
     "firefighters": "193: Corpo de Bombeiros"
   },
-  "Footer": {
-    "lar_title": "L.A.R",
-    "lar_subtitle": "Lugar de Acolhimento e Recomeço",
-    "useful_links": "Links úteis",
-    "home": "Início",
-    "about_us": "Sobre nós",
-    "contact": "Contato",
-    "terms_of_use": "Termos de uso",
-    "follow_us": "Nos Siga",
-    "all_rights_reserved": "© 2025 Global Core. Todos os direitos reservados."
-  },
+
   "Theme": {
     "light": "Claro",
     "dark": "Escuro",

@@ -3,9 +3,22 @@
     "home": "首页",
     "news": "新闻",
     "guide": "指南",
+    "about_us": "关于我们",
     "login": "登录",
     "restricted_area": "限制区域"
   },
+  "Footer": {
+    "lar_title": "L.A.R",
+    "lar_subtitle": "欢迎和重新开始的地方",
+    "useful_links": "有用链接",
+    "home": "首页",
+    "about_us": "关于我们",
+    "contact": "联系我们",
+    "terms_of_use": "使用条款",
+    "follow_us": "关注我们",
+    "all_rights_reserved": "© 2025 Global Core. 版权所有。"
+  },
+  
   "SectionFirst": {
     "title": "共同迎接新的开始",
     "description": "帮助适应、融入并有尊严地建立新生活。我们提供指导、课程、欢迎和机会。",
@@ -120,17 +133,7 @@
     "samu": "192: SAMU (救护车)",
     "firefighters": "193: 消防队"
   },
-  "Footer": {
-    "lar_title": "L.A.R",
-    "lar_subtitle": "欢迎和重新开始的地方",
-    "useful_links": "有用链接",
-    "home": "首页",
-    "about_us": "关于我们",
-    "contact": "联系我们",
-    "terms_of_use": "使用条款",
-    "follow_us": "关注我们",
-    "all_rights_reserved": "© 2025 Global Core. 版权所有。"
-  },
+
   "Theme": {
     "light": "浅色",
     "dark": "深色",

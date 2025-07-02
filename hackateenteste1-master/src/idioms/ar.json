@@ -3,9 +3,22 @@
     "home": "الصفحة الرئيسية",
     "news": "الأخبار",
     "guide": "الدليل",
+    "about_us": "معلومات عنا",
     "login": "تسجيل الدخول",
     "restricted_area": "منطقة محظورة"
   },
+  "Footer": {
+    "lar_title": "L.A.R",
+    "lar_subtitle": "مكان للترحيب والبداية الجديدة",
+    "useful_links": "روابط مفيدة",
+    "home": "الصفحة الرئيسية",
+    "about_us": "معلومات عنا",
+    "contact": "اتصل بنا",
+    "terms_of_use": "شروط الاستخدام",
+    "follow_us": "تابعنا",
+    "all_rights_reserved": "© 2025 Global Core. كل الحقوق محفوظة."
+  },
+  
   "SectionFirst": {
     "title": "معًا من أجل بداية جديدة",
     "description": "المساعدة في التكيف والاندماج وبناء حياة جديدة بكرامة. نقدم الإرشاد والدورات والاستقبال والفرص.",
@@ -120,17 +133,7 @@
     "samu": "192: SAMU (إسعاف)",
     "firefighters": "193: فيلق رجال الإطفاء"
   },
-  "Footer": {
-    "lar_title": "L.A.R",
-    "lar_subtitle": "مكان للترحيب والبداية الجديدة",
-    "useful_links": "روابط مفيدة",
-    "home": "الصفحة الرئيسية",
-    "about_us": "معلومات عنا",
-    "contact": "اتصل بنا",
-    "terms_of_use": "شروط الاستخدام",
-    "follow_us": "تابعنا",
-    "all_rights_reserved": "© 2025 Global Core. كل الحقوق محفوظة."
-  },
+
   "Theme": {
     "light": "فاتح",
     "dark": "داكن",
