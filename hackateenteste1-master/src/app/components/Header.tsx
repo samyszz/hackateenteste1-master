@@ -44,7 +44,7 @@ export default function Header() {
                 <UserButton
                   appearance={{
                     elements: {
-                      userButtonAvatarBox: "w-12 h-12", // tamanho aumentado
+                      userButtonAvatarBox: "w-12 h-12",
                     },
                   }}
                 />
@@ -59,7 +59,7 @@ export default function Header() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  className="w-8 h-8" // Botão maior
+                  className="w-8 h-8"
                 >
                   <path
                     strokeLinecap="round"
@@ -78,7 +78,11 @@ export default function Header() {
               <ListaLi linkRoute="/" liTitle={t("Header.home")} />
               <ListaLi linkRoute="/noticias" liTitle={t("Header.news")} />
               <ListaLi linkRoute="/guia" liTitle={t("Header.guide")} />
-              <ListaLi linkRoute="/sobre" liTitle={t('Header.about_us')} />
+              <li className="transition hover:underline hover:scale-110">
+                <a href="https://globarcore.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  {t('Header.about_us')}
+                </a>
+              </li>
               <li className="transition hover:underline hover:scale-110 cursor-pointer">
                 <SignedOut>
                   <SignInButton mode="modal">
@@ -117,7 +121,11 @@ export default function Header() {
               <ListaLi linkRoute="/" liTitle={t("Header.home")} />
               <ListaLi linkRoute="/noticias" liTitle={t("Header.news")} />
               <ListaLi linkRoute="/guia" liTitle={t("Header.guide")} />
-              <ListaLi linkRoute="/sobre" liTitle={t("Header.about_us")} />
+               <li className="transition hover:underline hover:scale-110">
+                <a href="https://globarcore.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  {t('Header.about_us')}
+                </a>
+              </li>
               <li className="transition hover:underline hover:scale-110">
                 <SignedOut>
                   <SignInButton mode="modal">
